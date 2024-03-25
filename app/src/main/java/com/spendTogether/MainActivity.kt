@@ -1,11 +1,13 @@
 package com.spendTogether
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.spendTogether.adapters.GroupAdapter
 import com.spendTogether.models.Group
 import java.text.SimpleDateFormat
@@ -60,6 +62,14 @@ class MainActivity : AppCompatActivity() {
             super.onCreate(savedInstanceState)
             enableEdgeToEdge()
             setContentView(R.layout.activity_main)
+
+            val plus_button: FloatingActionButton = findViewById(R.id.plus_button)
+
+            plus_button.setOnClickListener {
+                val intent = Intent(this, CreateGroupActivity::class.java)
+                startActivity(intent)
+
+            }
 
             val rvGroups: RecyclerView = findViewById(R.id.rvGroups)
             val groupsAdapter = GroupAdapter(groups);

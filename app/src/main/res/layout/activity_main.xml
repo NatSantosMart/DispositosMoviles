@@ -14,16 +14,33 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:layout_marginVertical="44dp"
-        android:text="@string/nameGroup"
+        android:text="@string/misGrupos"
         android:textAllCaps="true"
         android:textColor="@color/black"
         android:textSize="35sp"
         android:textStyle="bold"
         />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvGroups"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGroups"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </ScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/plus_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="top|center"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/plus"
+        />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

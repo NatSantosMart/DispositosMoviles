@@ -2,7 +2,12 @@
     <string name="app_name">SpendTogether</string>
 
     <!--Groups  -->
-    <string name="nameGroup">Mis grupos</string>
+    <string name="misGrupos">Mis grupos</string>
+    <string name="nuevoGrupo">Nuevo grupo</string>
     <string name="categorias">Categorias</string>
     <string name="canales">Canales</string>
+
+    <string name="nombre">Nombre</string>
+    <string name="descripcion">Descripción</string>
+    <string name="categoria">Categoría</string>
 </resources>
