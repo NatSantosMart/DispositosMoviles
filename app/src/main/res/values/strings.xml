@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SpendTogether</string>
+
+    <!--Groups  -->
+    <string name="nameGroup">Mis grupos</string>
+    <string name="categorias">Categorias</string>
+    <string name="canales">Canales</string>
+</resources>
