@@ -5,9 +5,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.spendTogether.R
 import com.spendTogether.models.Group
+import com.spendTogether.models.GroupResponse.GroupResponseItem
 import com.spendTogether.views.GroupViewHolder
 
-class GroupAdapter(private val groups: List<Group>) : RecyclerView.Adapter<GroupViewHolder> (){
+class GroupAdapter(private val groups: List<GroupResponseItem>) : RecyclerView.Adapter<GroupViewHolder> (){
 
     //Inflar el elemento o view a manejar
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GroupViewHolder {

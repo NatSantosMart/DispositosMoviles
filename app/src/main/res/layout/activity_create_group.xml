@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     android:paddingBottom="10dp"
     android:paddingTop="10dp"
-    android:paddingLeft="10dp"
-    android:paddingRight="10dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
     android:orientation="vertical"
     >
 
@@ -67,11 +67,82 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"/>
 
+    <TextView
+        android:id="@+id/participantsGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/participantes"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/viewContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginVertical="5dp"
+        app:cardBackgroundColor="@color/group_background_card"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp"
+            >
+
+            <TextView
+                android:id="@+id/nameParticipant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nombre"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/name_participant_input"
+                    android:layout_height="wrap_content"
+                    android:layout_width="200dp"
+                    android:layout_marginBottom="20dp"
+                    />
+
+                <Button android:id="@+id/buttonAddParticipant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:layout_marginLeft="30dp"
+                    android:text="Añadir"
+                    android:backgroundTint="@color/red"
+                    android:minWidth="0dp"
+                    android:minHeight="0dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDescriptionGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No hay personas añadidas"
+                android:textColor="@color/negro"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <Button android:id="@+id/boton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
+        android:backgroundTint="@color/red"
+        android:layout_marginTop="20dp"
         android:text="Guardar" />
 
 </LinearLayout>

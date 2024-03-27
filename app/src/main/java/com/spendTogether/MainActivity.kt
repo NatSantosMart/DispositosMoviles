@@ -5,64 +5,28 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.spendTogether.adapters.GroupAdapter
 import com.spendTogether.models.Group
+import com.spendTogether.models.GroupResponse.GroupResponseItem
+import com.spendTogether.service.RetrofitServiceFactory
+import kotlinx.coroutines.launch
 import java.text.SimpleDateFormat
 import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
-    private val groups = listOf(
-        Group(
-            id = 1,
-            name = "Viaje familiar",
-            description = "A gathering of extended family members for a weekend getaway",
-            category = "Family",
-            date = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).parse("23/02/2023"),
-            participants = arrayListOf("John", "Alice", "Michael", "Emily")
-        ),
-        Group(
-            id = 2,
-            name = "Cumple Laura",
-            description = "A group of avid readers meeting monthly to discuss literature",
-            category = "Hobby",
-            date = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).parse("01/01/2024"),
-            participants = arrayListOf("Sarah", "David", "Emma", "James", "Sophia")
-        ),
-        Group(
-            id = 3,
-            name = "Requena quedada",
-            description = "A group committed to regular exercise and fitness activities",
-            category = "Health",
-            date = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).parse("11/02/2024"),
-            participants = arrayListOf("Chris", "Megan", "Ryan", "Olivia", "Daniel")
-        ),
-        Group(
-            id = 4,
-            name = "Cumple Laura",
-            description = "A group of avid readers meeting monthly to discuss literature",
-            category = "Hobby",
-            date = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).parse("01/01/2024"),
-            participants = arrayListOf("Sarah", "David", "Emma", "James", "Sophia")
-        ),
-        Group(
-            id = 5,
-            name = "Cumple Laura",
-            description = "A group of avid readers meeting monthly to discuss literature",
-            category = "Hobby",
-            date = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).parse("01/01/2024"),
-            participants = arrayListOf("Sarah", "David", "Emma", "James", "Sophia")
-        ),
-    )
+    private val groupsInit = mutableListOf<GroupResponseItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
             super.onCreate(savedInstanceState)
             enableEdgeToEdge()
             setContentView(R.layout.activity_main)
 
+        //Evento de navegación a pantalla CreateGroupActivity
             val plus_button: FloatingActionButton = findViewById(R.id.plus_button)
 
             plus_button.setOnClickListener {
@@ -71,9 +35,23 @@ class MainActivity : AppCompatActivity() {
 
             }
 
+        //Capturamos el RecyclerView
             val rvGroups: RecyclerView = findViewById(R.id.rvGroups)
-            val groupsAdapter = GroupAdapter(groups);
+
+        //Montamos el Recycler de Groups
+            val groupsAdapter = GroupAdapter(groupsInit);
             rvGroups.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
             rvGroups.adapter = groupsAdapter;
+
+        //Crear la petición
+            val apiGroupsService = RetrofitServiceFactory.getGroupsRetrofit();
+            lifecycleScope.launch {
+                //Hacemos petición
+                val data = apiGroupsService.getGroups(("groups"));
+                groupsInit.clear();
+                groupsInit.addAll(data)
+                //Repintar el RecyclerView
+                groupsAdapter.notifyDataSetChanged()
+            }
         }
     }
