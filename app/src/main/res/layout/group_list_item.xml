@@ -20,20 +20,17 @@
                 android:id="@+id/txtNameGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Viaje Barcelona"
-                android:textColor="@color/negro"
+                android:textColor="@color/white"
                 android:textStyle="bold"
-                android:textSize="18sp"
+                android:textSize="22sp"
                 />
-
 
         <TextView
             android:id="@+id/txtDescriptionGroup"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Texto adicional debajo de Viaje Barcelona"
-            android:textColor="@color/negro"
-            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
             android:layout_marginTop="10dp" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

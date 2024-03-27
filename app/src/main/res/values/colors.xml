@@ -3,14 +3,15 @@
     <color name="negro">#FF000000</color>
     <color name="black">#FF000000</color>
     <color name="blanco">#FFFFFFFF</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#e0ebeb</color>
     <color name="orange">#F85313</color>
-    <color name="red">#A83F3B</color>
     <color name="grey">#E7E7E7</color>
     <color name="blue">#A83F3B</color>
 
+    <color name="backgroundApp">#1C2541</color>
+
     <!--GroupsApp-->
-    <color name="group_category_background_card">#3279AC</color>
-    <color name="group_background_card">#E5DAAB</color>
+    <color name="colorButton">#62A5A4</color>
+    <color name="group_background_card">#3A506B</color>
 </resources>
 

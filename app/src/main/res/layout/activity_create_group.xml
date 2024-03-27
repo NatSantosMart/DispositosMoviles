@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:paddingBottom="10dp"
     android:paddingTop="10dp"
+    android:background="@color/group_background_card"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:orientation="vertical"
@@ -11,14 +12,16 @@
 
     <!-- Widgets-->
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="32dp"
         android:layout_marginVertical="44dp"
         android:text="@string/nuevoGrupo"
         android:textAllCaps="true"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="35sp"
+        android:fontFamily="@font/amodhev"
+        android:textAlignment="center"
         android:textStyle="bold"
         />
 
@@ -26,8 +29,9 @@
         android:id="@+id/nameGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/nombre"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <EditText
@@ -35,14 +39,17 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginBottom="20dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"
         />
 
     <TextView
         android:id="@+id/descriptionGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/descripcion"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <EditText
@@ -50,30 +57,45 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_marginBottom="20dp"
-        />
+        android:textColor="@color/white"
+        android:backgroundTint="@color/white"/>
 
     <TextView
         android:id="@+id/categoryGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:text="@string/categoria"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textStyle="bold"
+        android:layout_marginBottom="20dp"
         />
 
-    <Spinner
-        android:id="@+id/spinner"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"/>
+        android:hint="Seleccione una opción">
+
+        <AutoCompleteTextView
+            android:id="@+id/autocompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none"
+            android:layout_marginBottom="20dp"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/participantsGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/participantes"
-        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
+        android:layout_marginBottom="20dp"
         />
     <androidx.cardview.widget.CardView
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -82,13 +104,15 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="5dp"
         android:layout_marginVertical="5dp"
-        app:cardBackgroundColor="@color/group_background_card"
+        app:cardBackgroundColor="@color/backgroundApp"
         >
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:padding="20dp"
             >
 
@@ -97,8 +121,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nombre"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -110,15 +135,17 @@
                     android:layout_height="wrap_content"
                     android:layout_width="200dp"
                     android:layout_marginBottom="20dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white"
                     />
 
                 <Button android:id="@+id/buttonAddParticipant"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
-                    android:layout_marginLeft="30dp"
+                    android:layout_marginLeft="9dp"
                     android:text="Añadir"
-                    android:backgroundTint="@color/red"
+                    android:backgroundTint="@color/colorButton"
                     android:minWidth="0dp"
                     android:minHeight="0dp"
                     android:paddingStart="20dp"
@@ -127,12 +154,13 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/txtDescriptionGroup"
+                android:id="@+id/nameAllPeopleGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="No hay personas añadidas"
-                android:textColor="@color/negro"
-                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textStyle="italic"
+                android:textSize="18sp"
                 android:layout_marginTop="10dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -141,7 +169,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
-        android:backgroundTint="@color/red"
+        android:backgroundTint="@color/colorButton"
         android:layout_marginTop="20dp"
         android:text="Guardar" />
 
