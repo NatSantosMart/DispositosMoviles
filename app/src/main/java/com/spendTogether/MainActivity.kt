@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
             rvGroups.adapter = groupsAdapter;
 
         //Crear la petición
-            val apiGroupsService = RetrofitServiceFactory.getGroupsRetrofit();
+            val apiGroupsService = RetrofitServiceFactory.getApiService();
             lifecycleScope.launch {
                 //Hacemos petición
                 val data = apiGroupsService.getGroups(("groups"));

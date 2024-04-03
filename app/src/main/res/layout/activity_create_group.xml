@@ -79,7 +79,7 @@
         android:hint="Seleccione una opción">
 
         <AutoCompleteTextView
-            android:id="@+id/autocompleteTextView"
+            android:id="@+id/categoria_selected"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
@@ -154,7 +154,7 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/nameAllPeopleGroup"
+                android:id="@+id/participants_input"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="No hay personas añadidas"
@@ -165,7 +165,7 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <Button android:id="@+id/boton"
+    <Button android:id="@+id/buttonSave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="20sp"
