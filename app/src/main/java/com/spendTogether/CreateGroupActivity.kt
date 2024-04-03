@@ -1,12 +1,16 @@
 package com.spendTogether
 
+import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
+import android.view.Gravity
 import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
@@ -60,6 +64,10 @@ class CreateGroupActivity : AppCompatActivity() {
 
             val charSequence: CharSequence = numberedParticipants;
             participants_input.text = charSequence
+
+            //Clear input
+            nameInput.setText("")
+
         }
     }
 
@@ -68,7 +76,7 @@ class CreateGroupActivity : AppCompatActivity() {
         val name_input: EditText = findViewById(R.id.name_input)
         val description_input: EditText = findViewById(R.id.description_input)
         val categoria_selected: AutoCompleteTextView = findViewById(R.id.categoria_selected)
-        val participants_input: TextView = findViewById(R.id.participants_input)
+
 
         buttonSave.setOnClickListener {
             val name: String = name_input.text.toString().trim()
@@ -76,10 +84,25 @@ class CreateGroupActivity : AppCompatActivity() {
             val category: String = categoria_selected.text.toString().trim()
             val participants: List<String> = participantList.map { it.substringAfter(". ").trim() }
 
+            // Verificar si algún campo está vacío
+            if (name.isEmpty() || description.isEmpty() || category.isEmpty() || participants.isEmpty()){
+                val toast = Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT)
+                val toastLayout = layoutInflater.inflate(R.layout.error_message, null)
+                toast.setGravity(Gravity.TOP, 0, 0)
+                val textView = toastLayout.findViewById<TextView>(R.id.text_toast)
+                textView.text = "Por favor, complete todos los campos"
+                toast.view = toastLayout
+                toast.show()
+                return@setOnClickListener
+            }
+
             val newGroup = GroupResponseItem(UUID.randomUUID().toString(), name, description, category, participants)
                 GlobalScope.launch(Dispatchers.IO) {
                     try {
                         apiGroupsService.addGroup("groups", newGroup)
+                        //Navegación a la vista de listado de grupos
+                        val intent = Intent(this@CreateGroupActivity, MainActivity::class.java)
+                        startActivity(intent)
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }

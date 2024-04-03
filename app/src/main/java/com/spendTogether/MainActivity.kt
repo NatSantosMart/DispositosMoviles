@@ -32,7 +32,6 @@ class MainActivity : AppCompatActivity() {
             plus_button.setOnClickListener {
                 val intent = Intent(this, CreateGroupActivity::class.java)
                 startActivity(intent)
-
             }
 
         //Capturamos el RecyclerView
