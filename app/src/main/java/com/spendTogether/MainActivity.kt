@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -22,6 +23,10 @@ class MainActivity : AppCompatActivity() {
     private val groupsInit = mutableListOf<GroupResponseItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
+            //Lanzamos el Splash
+            val screenSplash = installSplashScreen()
+
             super.onCreate(savedInstanceState)
             enableEdgeToEdge()
             setContentView(R.layout.activity_main)

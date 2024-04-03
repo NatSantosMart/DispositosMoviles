@@ -6,4 +6,12 @@
     </style>
 
     <style name="Theme.SpendTogether" parent="Base.Theme.SpendTogether" />
+
+    <!-- Splash -->
+    <style name="Theme.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/backgroundApp</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
+        <item name="windowSplashScreenAnimationDuration">3000</item>
+        <item name="postSplashScreenTheme">@style/Theme.SpendTogether</item>
+    </style>
 </resources>
