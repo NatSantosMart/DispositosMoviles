@@ -40,6 +40,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="top|center"
         android:layout_margin="16dp"
+        android:backgroundTint="@color/colorButton"
         app:srcCompat="@drawable/plus"
         />
 

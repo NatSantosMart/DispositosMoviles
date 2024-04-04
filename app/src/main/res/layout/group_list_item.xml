@@ -15,7 +15,6 @@
         android:orientation="vertical"
         android:padding="20dp"
         >
-
             <TextView
                 android:id="@+id/txtNameGroup"
                 android:layout_width="wrap_content"

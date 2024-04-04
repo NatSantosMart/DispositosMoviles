@@ -2,6 +2,8 @@ package com.spendTogether
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -20,12 +22,16 @@ import java.util.Locale
 
 class MainActivity : AppCompatActivity() {
 
+    private var splashScreenStays: Boolean = true;
+    private val DELAY: Long = 1500L;
     private val groupsInit = mutableListOf<GroupResponseItem>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
             //Lanzamos el Splash
             val screenSplash = installSplashScreen()
+            screenSplash.setKeepOnScreenCondition{splashScreenStays}
+            Handler(Looper.getMainLooper()).postDelayed({splashScreenStays = false}, DELAY)
 
             super.onCreate(savedInstanceState)
             enableEdgeToEdge()
