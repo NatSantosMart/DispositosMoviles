@@ -14,6 +14,8 @@ import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 import com.google.android.material.textfield.TextInputLayout
 import com.spendTogether.models.GroupResponse.GroupResponseItem
 import com.spendTogether.service.ApiGroups
@@ -33,7 +35,7 @@ class CreateGroupActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_create_group)
 
-        initSpinner()
+       // initSpinner()
         initAddParticipantButton()
         initSaveGroup()
     }
@@ -43,11 +45,11 @@ class CreateGroupActivity : AppCompatActivity() {
         val options = arrayOf("Casa compartida", "Viaje", "Celebración", "Proyecto", "Evento", "Otro")
         val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, options)
 
-        val categoria_selected = findViewById<AutoCompleteTextView>(R.id.categoria_selected)
-        categoria_selected.setAdapter(adapter)
+       // val categoria_selected = findViewById<AutoCompleteTextView>(R.id.categoria_selected)
+       // categoria_selected.setAdapter(adapter)
 
-        val textInputLayout = findViewById<TextInputLayout>(R.id.textInputLayout)
-        textInputLayout.hint = "Seleccione una opción"
+       // val textInputLayout = findViewById<TextInputLayout>(R.id.textInputLayout)
+       // textInputLayout.hint = "Seleccione una opción"
     }
 
     private fun initAddParticipantButton() {
@@ -75,13 +77,16 @@ class CreateGroupActivity : AppCompatActivity() {
         val buttonSave: Button = findViewById(R.id.buttonSave)
         val name_input: EditText = findViewById(R.id.name_input)
         val description_input: EditText = findViewById(R.id.description_input)
-        val categoria_selected: AutoCompleteTextView = findViewById(R.id.categoria_selected)
-
+        val categoria_selected: ChipGroup = findViewById(R.id.categoria_selected)
 
         buttonSave.setOnClickListener {
             val name: String = name_input.text.toString().trim()
             val description: String = description_input.text.toString().trim()
-            val category: String = categoria_selected.text.toString().trim()
+
+            val selectedChipId = categoria_selected.checkedChipId
+            val selectedChip = findViewById<Chip>(selectedChipId)
+            val category: String = selectedChip?.text?.toString()?.trim() ?: ""
+
             val participants: List<String> = participantList.map { it.substringAfter(". ").trim() }
 
             // Verificar si algún campo está vacío

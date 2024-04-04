@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="10dp"
@@ -31,7 +33,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:text="@string/nombre"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <EditText
@@ -49,7 +51,7 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:text="@string/descripcion"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold" />
 
     <EditText
@@ -66,26 +68,89 @@
         android:layout_height="wrap_content"
         android:textColor="@color/white"
         android:text="@string/categoria"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginBottom="20dp"
         />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.ExposedDropdownMenu"
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Seleccione una opción">
+        android:scrollbars="none">
 
-        <AutoCompleteTextView
-            android:id="@+id/categoria_selected"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="none"
-            android:layout_marginBottom="20dp"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/categoria_selected"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        app:singleSelection="true">
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_celebracion"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:chipIconTint="@color/black"
+            app:chipIcon="@drawable/celebration"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            app:chipIconVisible="true"
+            android:text="@string/celebracion"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_viaje"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:chipIconTint="@color/black"
+            app:chipIcon="@drawable/travel"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            app:chipIconVisible="true"
+            android:text="@string/viaje"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_project"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:chipIconTint="@color/black"
+            app:chipIcon="@drawable/project"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            app:chipIconVisible="true"
+            android:text="@string/proyecto"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_casa_compartida"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:chipIconTint="@color/black"
+            app:chipIcon="@drawable/house"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            app:chipIconVisible="true"
+            android:text="@string/casa_compartida"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_evento"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:chipIconTint="@color/black"
+            app:chipIcon="@drawable/calendar"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            app:chipIconVisible="true"
+            android:text="@string/evento"/>
+
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chip_otro"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:chipIconTint="@color/black"
+            app:chipIcon="@drawable/other"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            app:chipIconVisible="true"
+            android:text="@string/otro"/>
+        
+    </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
 
     <TextView
         android:id="@+id/participantsGroup"
@@ -93,7 +158,7 @@
         android:layout_height="wrap_content"
         android:text="@string/participantes"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginBottom="20dp"
         />
@@ -121,7 +186,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/nombre"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:textColor="@color/white"/>
 
@@ -160,7 +225,7 @@
                 android:text="No hay personas añadidas"
                 android:textColor="@color/white"
                 android:textStyle="italic"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:layout_marginTop="10dp" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>

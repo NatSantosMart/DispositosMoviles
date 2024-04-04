@@ -11,4 +11,11 @@
     <string name="descripcion">Descripción</string>
     <string name="categoria">Categoría</string>
     <string name="participantes">Participantes</string>
+
+    <string name="casa_compartida">Casa compartida</string>
+    <string name="viaje">Viaje</string>
+    <string name="celebracion">Celebración</string>
+    <string name="evento">Evento</string>
+    <string name="proyecto">Proyecto</string>
+    <string name="otro">Otro</string>
 </resources>
