@@ -102,16 +102,17 @@ class CreateGroupActivity : AppCompatActivity() {
             }
 
             val newGroup = GroupResponseItem(UUID.randomUUID().toString(), name, description, category, participants)
-                GlobalScope.launch(Dispatchers.IO) {
-                    try {
-                        apiGroupsService.addGroup("groups", newGroup)
-                        //Navegación a la vista de listado de grupos
-                        val intent = Intent(this@CreateGroupActivity, MainActivity::class.java)
-                        startActivity(intent)
-                    } catch (e: Exception) {
-                        e.printStackTrace()
-                    }
+            GlobalScope.launch(Dispatchers.IO) {
+                try {
+                    apiGroupsService.addGroup("groups", newGroup)
+                    //Navegación a la vista de listado de grupos
+                    val intent = Intent(this@CreateGroupActivity, MainActivity::class.java)
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    e.printStackTrace()
                 }
+            }
+
         }
     }
 }
