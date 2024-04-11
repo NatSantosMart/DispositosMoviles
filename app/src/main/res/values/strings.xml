@@ -18,4 +18,8 @@
     <string name="evento">Evento</string>
     <string name="proyecto">Proyecto</string>
     <string name="otro">Otro</string>
+
+    <!--Gastos -->
+    <string name="nuevoGasto">Nuevo gasto</string>
+    <string name="cantidad">Cantidad</string>
 </resources>
