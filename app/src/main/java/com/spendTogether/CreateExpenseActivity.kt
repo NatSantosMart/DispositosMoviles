@@ -2,6 +2,8 @@ package com.spendTogether
 
 import android.os.Bundle
 import android.view.Gravity
+import android.widget.ArrayAdapter
+import android.widget.AutoCompleteTextView
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -19,15 +21,22 @@ import java.util.UUID
 class CreateExpenseActivity : AppCompatActivity() {
 
     private val apiExpenseService = RetrofitExpenseServiceFactory.getApiService();
+    private lateinit var participantsAutoCompleteTextView: AutoCompleteTextView
 
-    val participantList = mutableListOf<String>();
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_create_expense)
-
-       // initSpinner()
+        participantsAutoCompleteTextView = findViewById(R.id.participantsAutoCompleteTextView)
+        initSpinner()
         initSaveExpense()
+    }
+
+    private fun initSpinner() {
+
+        val participants = arrayOf("Participant 1", "Participant 2", "Participant 3")
+        val adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, participants)
+        participantsAutoCompleteTextView.setAdapter(adapter)
     }
 
     private fun initSaveExpense() {
@@ -38,10 +47,10 @@ class CreateExpenseActivity : AppCompatActivity() {
         buttonSave.setOnClickListener {
             val name: String = name_input.text.toString().trim()
             val quantity: String = quantity_input.text.toString().trim()
-            val participant: String = "Ana";
+            val paidBy: String = "Ana";
 
             // Verificar si algún campo está vacío
-            if (name.isEmpty() || quantity.isEmpty() || participant.isEmpty()){
+            if (name.isEmpty() || quantity.isEmpty() || paidBy.isEmpty()){
                 val toast = Toast.makeText(this, "Por favor, complete todos los campos", Toast.LENGTH_SHORT)
                 val toastLayout = layoutInflater.inflate(R.layout.error_message, null)
                 toast.setGravity(Gravity.TOP, 0, 0)
@@ -52,10 +61,10 @@ class CreateExpenseActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val newExpense = ExpenseResponseItem(UUID.randomUUID().toString(), 1,name, quantity,"", "")
+            val newExpense = ExpenseResponseItem(UUID.randomUUID().toString(),name, quantity, "", "", 1)
             GlobalScope.launch(Dispatchers.IO) {
                 try {
-                    apiExpenseService.addExpense("expense", newExpense)
+                    apiExpenseService.addExpense("expenses", newExpense)
                     //Navegación a la vista de los gastos del viaje
 
                 } catch (e: Exception) {

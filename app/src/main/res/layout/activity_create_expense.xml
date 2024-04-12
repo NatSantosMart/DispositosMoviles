@@ -67,12 +67,26 @@
         android:id="@+id/participantsGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/participantes"
+        android:text="@string/pagadoPor"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         android:layout_marginBottom="20dp"
         />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/participantsTextInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+
+        <AutoCompleteTextView
+            android:id="@+id/participantsAutoCompleteTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button android:id="@+id/buttonSave"
         android:layout_width="match_parent"
