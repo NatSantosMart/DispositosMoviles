@@ -146,5 +146,15 @@
         "Carla"
       ]
     }
+  ],
+  "expenses":[
+    {
+      "id": "2",
+      "name": "Helado",
+      "quantity": 2.3,
+      "paidBy": "Alice",
+      "groupId": 1,
+      "date": "02/10/203"
+    }
   ]
 }
