@@ -13,6 +13,7 @@
 
     <!--GroupsApp-->
     <color name="colorButton">#62A5A4</color>
+    <color name="selectedButton">#527A79</color>
     <color name="group_background_card">#3A506B</color>
 
 </resources>

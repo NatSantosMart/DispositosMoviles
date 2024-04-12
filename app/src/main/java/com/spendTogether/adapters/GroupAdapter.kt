@@ -8,12 +8,11 @@ import com.spendTogether.models.Group
 import com.spendTogether.models.GroupResponse.GroupResponseItem
 import com.spendTogether.views.GroupViewHolder
 
-class GroupAdapter(private val groups: List<GroupResponseItem>) : RecyclerView.Adapter<GroupViewHolder> (){
-
+class GroupAdapter(private val groups: List<GroupResponseItem>, private val onclick: (GroupResponseItem)->Unit) : RecyclerView.Adapter<GroupViewHolder> (){
     //Inflar el elemento o view a manejar
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GroupViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.group_list_item, parent, false);
-        return GroupViewHolder(view);
+        return GroupViewHolder(view, onclick);
     }
 
     //Contar el numero total de items

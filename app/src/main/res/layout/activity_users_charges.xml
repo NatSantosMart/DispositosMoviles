@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
+    android:background="@color/group_background_card"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:orientation="vertical"
+    >
+    <!-- Sección del nombre de la aplicación -->
+    <TextView
+        android:id="@+id/text_app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:text="SpendTogether"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/layout_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/text_app_name"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_expenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gastos"
+            android:background="@color/colorButton"
+            android:layout_margin="16dp"/>
+
+        <Button
+            android:id="@+id/btn_refunds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Reembolsos"
+            android:background="@color/selectedButton"
+            android:layout_margin="16dp"/>
+    </LinearLayout>
+
+    <!-- Sección de detalles del gasto -->
+    <LinearLayout
+        android:id="@+id/layout_expense_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/layout_buttons"
+        android:padding="16dp">
+
+        <!-- Título del gasto -->
+        <TextView
+            android:id="@+id/text_expense_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Título del Gasto"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Lista de usuarios y lo que deben pagar -->
+        <TextView
+            android:id="@+id/text_users_and_payments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+
+            android:text="Lista de usuarios y sus pagos"
+            android:textSize="16sp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/participantsRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="2"/>
+    </LinearLayout>
+</LinearLayout>

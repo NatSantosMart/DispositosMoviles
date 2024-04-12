@@ -8,6 +8,7 @@ import retrofit2.create
 import retrofit2.http.Body
 import retrofit2.http.GET;
 import retrofit2.http.POST
+import retrofit2.http.Path
 import retrofit2.http.Url;
 
 interface ApiGroups {
@@ -22,7 +23,7 @@ object RetrofitServiceFactory{
 
     fun getApiService(): ApiGroups{
         return Retrofit.Builder().
-            baseUrl("http://192.168.1.16:3000")
+            baseUrl("http://192.168.0.11:3000")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
             .create(ApiGroups::class.java)
