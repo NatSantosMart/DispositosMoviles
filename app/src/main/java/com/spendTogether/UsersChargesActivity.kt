@@ -1,5 +1,6 @@
 package com.spendTogether
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -7,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.spendTogether.adapters.GroupAdapter
 import com.spendTogether.adapters.usersMoneyAdapter
 import com.spendTogether.models.ExpenseResponse.ExpenseResponse
@@ -37,6 +39,14 @@ class UsersChargesActivity : AppCompatActivity() {
         val apiExpenseService = RetrofitExpenseServiceFactory.getApiService()
         val apiGroupsService = RetrofitServiceFactory.getApiService()
 
+        val add_expense_button: FloatingActionButton = findViewById(R.id.add_expense_button)
+
+        add_expense_button.setOnClickListener {
+            val intent = Intent(this, CreateExpenseActivity::class.java)
+            //intent.putExtra("groupId", groupId)
+            intent.putExtra("groupId", "4")
+            startActivity(intent)
+        }
 
         lifecycleScope.launch {
             try {

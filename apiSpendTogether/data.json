@@ -147,7 +147,7 @@
       ]
     }
   ],
-  "expenses":[
+  "expenses": [
     {
       "id": "2",
       "name": "Helado",
@@ -155,6 +155,38 @@
       "paidBy": "Alice",
       "groupId": 1,
       "date": "02/10/203"
+    },
+    {
+      "id": "afce71c8-79d9-4101-933a-d19972850d56",
+      "date": "",
+      "idGroup": "null",
+      "name": "gf",
+      "paidBy": "",
+      "quantity": "gg"
+    },
+    {
+      "id": "634c2f66-478c-47b4-ad35-824658948308",
+      "date": "",
+      "idGroup": "4",
+      "name": "jjjuu",
+      "paidBy": "",
+      "quantity": "uuy"
+    },
+    {
+      "id": "9403665f-d020-459a-bd76-00e9e476d24e",
+      "date": "",
+      "idGroup": "4",
+      "name": "gasto",
+      "paidBy": "Isaac",
+      "quantity": "543"
+    },
+    {
+      "id": "bb3d56ca-0429-495e-8a7a-2378ef7598ad",
+      "date": "02/04/2024",
+      "idGroup": "4",
+      "name": "jgh",
+      "paidBy": "Jack",
+      "quantity": "yu"
     }
   ]
 }
