@@ -60,12 +60,14 @@ class MainActivity : AppCompatActivity() {
             }
 
         //Evento de clickar en un rv
-        rvGroups.setOnClickListener{ val intent = Intent(this, UsersCharges::class.java)
-            startActivity(intent)}
+        rvGroups.setOnClickListener {
+            val intent = Intent(this, CreateGroupActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun adapterOnClick() {
-        val intent = Intent(this, UsersCharges()::class.java)
+        val intent = Intent(this, UsersChargesActivity()::class.java)
         startActivity(intent)
     }
     }

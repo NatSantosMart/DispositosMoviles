@@ -29,4 +29,9 @@ class GroupViewHolder (view: View, val onClick: (GroupResponseItem)->Unit) : Rec
         txtNameGroup.text = group.name
         txtDescriptionGroup.text = group.description
     }
+
+    fun bind(group: GroupResponseItem) {
+        txtNameGroup.text = group.name
+        txtDescriptionGroup.text = group.description
+    }
 }

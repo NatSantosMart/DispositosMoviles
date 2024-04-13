@@ -6,5 +6,5 @@ data class ExpenseResponseItem(
     val quantity:String,
     val paidBy:String,
     val date: String,
-    val idGroup: Int
+    val idGroup: String
 )

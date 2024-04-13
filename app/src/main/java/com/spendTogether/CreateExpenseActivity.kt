@@ -61,7 +61,7 @@ class CreateExpenseActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
-            val newExpense = ExpenseResponseItem(UUID.randomUUID().toString(),name, quantity, "", "", 1)
+            val newExpense = ExpenseResponseItem(UUID.randomUUID().toString(),name, quantity, "", "", "1")
             GlobalScope.launch(Dispatchers.IO) {
                 try {
                     apiExpenseService.addExpense("expenses", newExpense)
