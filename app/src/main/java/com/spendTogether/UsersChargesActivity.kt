@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.spendTogether.adapters.GroupAdapter
-import com.spendTogether.adapters.usersMoneyAdapter
+import com.spendTogether.adapters.UsersMoneyAdapter
 import com.spendTogether.models.ExpenseResponse.ExpenseResponse
 import com.spendTogether.models.ExpenseResponse.ExpenseResponseItem
 import com.spendTogether.service.RetrofitExpenseServiceFactory
@@ -21,7 +21,7 @@ import kotlinx.coroutines.launch
 class UsersChargesActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
-    private lateinit var adapter: usersMoneyAdapter
+    private lateinit var adapter: UsersMoneyAdapter
     private val expensesInit = mutableListOf<ExpenseResponseItem>()
 
 
@@ -58,14 +58,12 @@ class UsersChargesActivity : AppCompatActivity() {
         }
 
 
-        val participants = listOf("David", "Maria")
-
         //Capturamos el RecyclerView
         val rvExpenses: RecyclerView = findViewById(R.id.rvExpenses)
 
         //Montamos el recycler de Users
         rvExpenses.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        val expensesAdapter = usersMoneyAdapter(expensesInit)
+        val expensesAdapter = UsersMoneyAdapter(expensesInit)
         rvExpenses.adapter = expensesAdapter
 
 

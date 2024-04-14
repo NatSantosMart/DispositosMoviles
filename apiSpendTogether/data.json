@@ -46,13 +46,14 @@
         "David",
         "Emily"
       ]
-    },{
+    },
+    {
       "id": "4",
       "name": "Cena de Cumpleaños",
       "description": "Grupo de gastos compartidos para la cena de cumpleaños de Alice",
       "category": "Celebración",
       "participants": [
-        "Alice", 
+        "Alice",
         "Natalia"
       ]
     },
@@ -64,7 +65,7 @@
       "participants": [
         "Jorge",
         "María",
-        "David", 
+        "David",
         "Pablo"
       ]
     },
@@ -99,27 +100,35 @@
     },
     {
       "id": "634c2f66-478c-47b4-ad35-824658948308",
-      "date": "",
+      "date": "03/04/2024",
       "idGroup": "4",
-      "name": "jjjuu",
-      "paidBy": "",
-      "quantity": "uuy"
+      "name": "Gasto1",
+      "paidBy": "Isaac",
+      "quantity": "25"
     },
     {
       "id": "9403665f-d020-459a-bd76-00e9e476d24e",
-      "date": "",
+      "date": "02/04/2024",
       "idGroup": "4",
-      "name": "gasto",
+      "name": "Gasto2",
       "paidBy": "Isaac",
-      "quantity": "543"
+      "quantity": "12"
     },
     {
       "id": "bb3d56ca-0429-495e-8a7a-2378ef7598ad",
       "date": "02/04/2024",
       "idGroup": "4",
-      "name": "jgh",
+      "name": "Gasto3",
       "paidBy": "Jack",
-      "quantity": "yu"
+      "quantity": "24"
+    },
+    {
+      "id": "df5638f4-36f8-4b27-9eee-9177c6f6eb4c",
+      "date": "11/04/2024",
+      "idGroup": "1",
+      "name": "Coche",
+      "paidBy": "Nerea",
+      "quantity": "5"
     }
   ]
 }
