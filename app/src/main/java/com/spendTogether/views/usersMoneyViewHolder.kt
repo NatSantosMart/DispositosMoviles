@@ -8,11 +8,11 @@ import com.spendTogether.models.ExpenseResponse.ExpenseResponseItem
 import com.spendTogether.models.GroupResponse.GroupResponseItem
 
 class usersMoneyViewHolder (view: View): RecyclerView.ViewHolder(view) {
-    private val userName: TextView = view.findViewById(R.id.userName);
-    private val userMoney: TextView = view.findViewById(R.id.userMoney);
+   // private val userName: TextView = view.findViewById(R.id.userName);
+   // private val userMoney: TextView = view.findViewById(R.id.userMoney);
 
     fun render(expense: ExpenseResponseItem) {
-        userName.text = expense.paidBy;
-        userMoney.text = expense.quantity
+      //  userName.text = expense.paidBy;
+      //  userMoney.text = expense.quantity
     }
 }

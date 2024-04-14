@@ -3,29 +3,41 @@
     {
       "id": "1",
       "name": "Apartamento 101",
-      "description": "Grupo de gastos compartidos para el apartamento 101. Incluye alquiler, servicios públicos y compras compartidas.",
+      "description": "Incluye alquiler, servicios públicos y compras compartidas.",
       "category": "Hogar",
       "participants": [
-        "Alice",
-        "Bob",
-        "Charlie",
-        "David"
+        "María",
+        "Juan",
+        "Nerea",
+        "Paula"
       ]
     },
     {
       "id": "2",
       "name": "Viaje a la Playa",
-      "description": "Grupo de gastos compartidos para un viaje a la playa. Incluye transporte, alojamiento, alimentación y actividades.",
+      "description": "Grupo de gastos compartidos para un viaje a la playa.",
       "category": "Viaje",
       "participants": [
-        "Emily",
-        "Frank"
+        "Luna",
+        "Carla",
+        "Hector"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Viaje a la Playa",
+      "description": "Grupo de gastos compartidos para un viaje a la playa.",
+      "category": "Viaje",
+      "participants": [
+        "Luna",
+        "Carla",
+        "Hector"
       ]
     },
     {
       "id": "3",
       "name": "Cena de Cumpleaños",
-      "description": "Grupo de gastos compartidos para la cena de cumpleaños de Alice. Incluye comida, bebida y decoraciones.",
+      "description": "Grupo de gastos compartidos para la cena de cumpleaños de Alice",
       "category": "Celebración",
       "participants": [
         "Alice",
@@ -34,127 +46,37 @@
         "David",
         "Emily"
       ]
-    },
-    {
+    },{
       "id": "4",
-      "name": "Club de Lectura",
-      "description": "Grupo de gastos compartidos para el club de lectura mensual. Incluye libros y refrigerios.",
-      "category": "Cultura",
+      "name": "Cena de Cumpleaños",
+      "description": "Grupo de gastos compartidos para la cena de cumpleaños de Alice",
+      "category": "Celebración",
       "participants": [
-        "Grace",
-        "Hannah",
-        "Isaac",
-        "Jack",
-        "Kelly"
+        "Alice", 
+        "Natalia"
       ]
     },
     {
       "id": "5",
       "name": "Gimnasio Comunitario",
-      "description": "Grupo de gastos compartidos para la membresía del gimnasio comunitario. Incluye cuotas mensuales y clases.",
+      "description": "Grupo de gastos compartidos para la membresía del gimnasio comunitario.",
       "category": "Salud",
       "participants": [
-        "Bob",
-        "Charlie",
-        "David"
+        "Jorge",
+        "María",
+        "David", 
+        "Pablo"
       ]
     },
     {
       "id": "6",
       "name": "Reunión Mensual de Vecinos",
-      "description": "Grupo de gastos compartidos para la organización de la reunión mensual de vecinos. Incluye meriendas y material de presentación.",
+      "description": "Organización de la reunión mensual de vecinos (meriendas)",
       "category": "Comunidad",
       "participants": [
-        "Alice",
-        "Bob",
-        "Charlie",
-        "David",
-        "Emily",
-        "Frank",
-        "Grace",
-        "Hannah"
-      ]
-    },
-    {
-      "id": "f1c4e5ae-b7d9-4a71-a03d-a2b5782346d1",
-      "category": "Proyecto",
-      "description": "prueba",
-      "name": "prueba",
-      "participants": [
-        "1. natalia"
-      ]
-    },
-    {
-      "id": "f56e9aff-cddb-4729-ba27-4144494b8461",
-      "category": "Proyecto",
-      "description": "prueba",
-      "name": "prueba",
-      "participants": [
-        "1. natalia",
-        "2. Carla"
-      ]
-    },
-    {
-      "id": "a8b1f979-dc15-40a8-9f03-f0c9b0cacfac",
-      "category": "Celebración",
-      "description": "Lugar bonito",
-      "name": "Viaje Alaska",
-      "participants": [
-        "Luca",
-        "Marta",
-        "carlos"
-      ]
-    },
-    {
-      "id": "688c6a53-a30c-4c48-bc6d-c693d9d1168d",
-      "category": "Celebración",
-      "description": "Zpatillas nike",
-      "name": "Regalo Dani",
-      "participants": [
-        "Marcos",
-        "alvaro",
-        "nat"
-      ]
-    },
-    {
-      "id": "ef6be183-92ce-4490-b421-fc1bc8dda356",
-      "category": "Evento",
-      "description": "Muy bonito y recomandado",
-      "name": "Nueva York",
-      "participants": [
-        "Luna",
-        "Alonso",
-        "Natalia"
-      ]
-    },
-    {
-      "id": "47c81cbd-ea28-4cb9-8508-362084358d89",
-      "category": "Celebración",
-      "description": "fdfd",
-      "name": "ddfd",
-      "participants": [
-        "dfdf"
-      ]
-    },
-    {
-      "id": "fcb15f99-ac63-4235-b3e1-71dcaa16c592",
-      "category": "Viaje",
-      "description": "Descripcin viaje madrid",
-      "name": "Viaje madrid",
-      "participants": [
-        "Luca",
-        "Carla"
-      ]
-    },
-    {
-      "id": "73829807-56f2-4ed3-b9f8-69094d9fa2ff",
-      "category": "Evento",
-      "description": "eevnto des",
-      "name": "Vieja a almeria",
-      "participants": [
-        "Lucia",
-        "Miguel",
-        "Natalia"
+        "Carla",
+        "María",
+        "Lucas"
       ]
     }
   ],

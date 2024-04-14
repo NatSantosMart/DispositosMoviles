@@ -53,7 +53,7 @@ class UsersChargesActivity : AppCompatActivity() {
         add_expense_button.setOnClickListener {
             val intent = Intent(this, CreateExpenseActivity::class.java)
             //intent.putExtra("groupId", groupId)
-            intent.putExtra("groupId", "4")
+            intent.putExtra("groupId", groupId)
             startActivity(intent)
         }
 

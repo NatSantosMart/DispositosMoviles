@@ -45,6 +45,7 @@ class CreateExpenseActivity : AppCompatActivity() {
         textInputEditTextDate = findViewById(R.id.text_input_edit_text_date)
         val groupId = intent.getStringExtra("groupId")
 
+
         lifecycleScope.launch {
             try {
                 val group = apiGroupsService.getGroupById(groupId.toString())
