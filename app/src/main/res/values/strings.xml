@@ -23,4 +23,5 @@
     <string name="nuevoGasto">Nuevo gasto</string>
     <string name="cantidad">Cantidad</string>
     <string name="pagadoPor">Pagado por</string>
+    <string name="date">Fecha</string>
 </resources>

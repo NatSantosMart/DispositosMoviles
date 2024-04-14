@@ -96,5 +96,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:transitionGroup="true"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/add_expense_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="25dp"
+            android:layout_marginBottom="70dp"
+            android:backgroundTint="@color/colorButton"
+            app:tint="@color/blanco"
+            app:srcCompat="@drawable/plus"
+            />
   </LinearLayout>
 </LinearLayout>

@@ -19,6 +19,9 @@
             android:name=".UsersChargesActivity"
             android:exported="false" />
         <activity
+            android:name=".CreateExpenseActivity"
+            android:exported="false" />
+        <activity
             android:name=".CreateGroupActivity"
             android:exported="false" />
         <activity
