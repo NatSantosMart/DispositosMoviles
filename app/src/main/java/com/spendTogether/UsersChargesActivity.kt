@@ -39,6 +39,15 @@ class UsersChargesActivity : AppCompatActivity() {
         val apiExpenseService = RetrofitExpenseServiceFactory.getApiService()
         val apiGroupsService = RetrofitServiceFactory.getApiService()
 
+        lifecycleScope.launch {
+            try {
+                val group = apiGroupsService.getGroupById(groupId)
+                text_group_name.setText(group.name);
+            } catch (e: Exception) {
+                // Manejar el error
+            }
+        }
+
         val add_expense_button: FloatingActionButton = findViewById(R.id.add_expense_button)
 
         add_expense_button.setOnClickListener {
@@ -48,14 +57,6 @@ class UsersChargesActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        lifecycleScope.launch {
-            try {
-                val group = apiGroupsService.getGroupById(groupId)
-                text_group_name.setText(group.name);
-            } catch (e: Exception) {
-                // Manejar el error
-            }
-        }
 
         val participants = listOf("David", "Maria")
 

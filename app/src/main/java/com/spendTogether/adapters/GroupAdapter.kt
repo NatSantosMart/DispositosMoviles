@@ -32,10 +32,6 @@ class GroupAdapter(private val groups: List<GroupResponseItem>, private val oncl
         holder.bind(group)
 
         holder.itemView.setOnClickListener {
-            onclick(group)
-        }
-
-        holder.itemView.findViewById<Button>(R.id.buttonAcceso)?.setOnClickListener {
             val context = holder.itemView.context
             val intent = Intent(context, UsersChargesActivity::class.java)
             intent.putExtra("groupId", group.id)
