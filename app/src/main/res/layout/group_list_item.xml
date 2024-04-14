@@ -38,16 +38,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="@color/white"
-                android:textSize="14sp"
+                android:textSize="16sp"
                 android:layout_marginTop="5dp"
                 />
 
             <Button android:id="@+id/buttonAcceso"
-                android:layout_width="70dp"
+                android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:textSize="12sp"
-                android:background="@drawable/arrow"
-                android:backgroundTint="@color/colorButton" />
+                android:background="@drawable/arrowlist"
+                 />
 
         </LinearLayout>
     </LinearLayout>
