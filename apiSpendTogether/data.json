@@ -145,6 +145,17 @@
         "Luca",
         "Carla"
       ]
+    },
+    {
+      "id": "73829807-56f2-4ed3-b9f8-69094d9fa2ff",
+      "category": "Evento",
+      "description": "eevnto des",
+      "name": "Vieja a almeria",
+      "participants": [
+        "Lucia",
+        "Miguel",
+        "Natalia"
+      ]
     }
   ],
   "expenses": [

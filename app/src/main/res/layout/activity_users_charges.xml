@@ -18,7 +18,7 @@
         android:textColor="@color/white"
         android:layout_marginTop="16dp"
         android:textAlignment="center"
-        android:text="SpendTogether"
+        android:text="@string/app_name"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -34,7 +34,7 @@
             android:id="@+id/btn_expenses"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gastos"
+            android:text="@string/gastos"
             android:background="@color/colorButton"
             android:layout_margin="16dp"/>
 
@@ -42,7 +42,7 @@
             android:id="@+id/btn_refunds"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Reembolsos"
+            android:text="@string/reembolsos"
             android:background="@color/selectedButton"
             android:layout_margin="16dp"/>
     </LinearLayout>
@@ -62,21 +62,8 @@
             android:layout_height="wrap_content"
             android:textSize="25sp"
             android:textStyle="bold"
-            android:text="Nombre grupo"
             android:textAllCaps="true"
             android:layout_gravity="center_horizontal"
-            android:textColor="@color/white"
-
-            android:layout_marginBottom="8dp"/>
-
-        <!-- Título del gasto -->
-        <TextView
-            android:id="@+id/text_expense_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Título del Gasto"
-            android:textSize="20sp"
-            android:textStyle="italic"
             android:textColor="@color/white"
 
             android:layout_marginBottom="8dp"/>
@@ -88,7 +75,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
 
-            android:text="Lista de usuarios y sus pagos"
+            android:text="@string/lista_usuarios"
             android:textSize="16sp"/>
 
         <androidx.recyclerview.widget.RecyclerView

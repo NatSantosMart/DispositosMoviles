@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">SpendTogether</string>
 
+    <string name="buttonGuardar">Guardar</string>
+    <string name="buttonAñadir">Añadir</string>
+
     <!--Groups  -->
     <string name="misGrupos">Mis grupos</string>
     <string name="nuevoGrupo">Nuevo grupo</string>
@@ -24,4 +27,12 @@
     <string name="cantidad">Cantidad</string>
     <string name="pagadoPor">Pagado por</string>
     <string name="date">Fecha</string>
+
+    <string name="gastos">Gastos</string>
+    <string name="reembolsos">Reembolsos</string>
+    <string name="lista_usuarios">Lista de usuarios y sus pagos:</string>
+
+
+
+
 </resources>
